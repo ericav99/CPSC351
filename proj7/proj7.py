@@ -21,9 +21,9 @@ except KeyboardInterrupt:
 #loop that moves through each character in the given input_string
 while True:
     current_state = start
+    if input_string.__len__() == 0:
+        print("Accepted")
     for character in str(input_string):
-        if input_string.__len__() == 0:
-            print("Accepted")
         if not character in alphabet:
             current_state = 3
         else:
