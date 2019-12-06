@@ -23,7 +23,7 @@ while True:
     current_state = start
     for character in str(input_string):
         if input_string.__len__() == 0:
-            current_state = 3
+            print("Accepted")
         if not character in alphabet:
             current_state = 3
         else:
