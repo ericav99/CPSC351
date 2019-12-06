@@ -7,7 +7,7 @@ import sys
 alphabet = ['0','1']
 states = [0,1,2,3]
 start = 0;
-accept = [1,2]
+accept = [0,1,2]
 
 #define the transition states
 transition_states = {0:{'0':3, '1':1}, 1:{'0':2, '1':2}, 2:{'0':3, '1':1}, 3:{'0':3, '1':3}}
@@ -21,8 +21,6 @@ except KeyboardInterrupt:
 #loop that moves through each character in the given input_string
 while True:
     current_state = start
-    if input_string.__len__() == 0:
-        print("Accepted")
     for character in str(input_string):
         if not character in alphabet:
             current_state = 3
