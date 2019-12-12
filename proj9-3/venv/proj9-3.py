@@ -132,7 +132,6 @@ reject = [7]
 
 #loop that moves through each character in the given input_string
 while True:
-
     # Input also to exit with cntrl-c
     try:
         input_string = input("Input string: ")
@@ -142,4 +141,6 @@ while True:
     inp = list(input_string)
     inp.append(" ")
     t = TM(states, alphabet, tape, start, accept, reject)
+    if(input_string == "quit"):
+        sys.exit()
     t.trans_q1(inp, 0)
